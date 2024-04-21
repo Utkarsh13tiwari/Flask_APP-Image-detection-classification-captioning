@@ -1,39 +1,41 @@
-# The Infilect Directory contains 2 Flask APIs
+# The Infilect Directory contains 2 Flask API
+________________________________________________________________________________________________________________________
+## Method 1:
 
-## Method 1: Client.py and server.py
+Client.py and server.py
 
-1. Run `server.py`.
-2. Run `client.py` in a separate terminal.
+1. Run server.py
+2. Run client.py in separate terminal
+________________________________________________
+Make sure to pass the necessary paths/arguments.
+You can either pass --json-file (Folder of images) or --file ( single image path )
+________________________________________________
+Run client.py using terminal to pass the argument appropriately.
 
-**Make sure to pass the necessary paths/arguments.**
-You can either pass `--json-file` (Folder of images) or `--file` (single image path).
+1. Example on Single Image:
+    python client.py --file C:\Users\utkar\PycharmProjects\Infilect\Images\image-24.jpg
 
-**Run `client.py` using terminal to pass the argument appropriately.**
+2. Example on JSON/Multiple Images:
+    python client.py --json-file C:\Users\utkar\PycharmProjects\Infilect\Images\images_data.json
 
-**Example on Single Image:**
-```bash
-python client.py --file path\to\single_Image
+    Note: You can create JSON file for your Image folder using create_json.py
+________________________________________________________________________________________________________________________
+## Method 2:
+Navigate to Infilect/Webapp/
 
-**Example on JSON/Multiple Images:**
-```bash
-python client.py --file path\to\json
+Follow the steps mentioned in Webapp_Readme.txt
+________________________________________________________________________________________________________________________
+## Requirement
 
+run requirements.txt
+or
+Download:
 
-*Note: You can create a JSON file for your Image folder using `create_json.py`.*
+1. pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118 (Download Pytorch)
 
-## Method 2: 
-Navigate to `Infilect/Webapp/`.
+2. git clone https://github.com/ultralytics/yolov5  # clone
+   %cd yolov5
+   pip install -r requirements.txt
 
-Follow the steps mentioned in `Webapp_Readme.txt`.
-
-## Requirements
-
-Run `requirements.txt` or download the following:
-
-1. `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118` (Download PyTorch)
-
-2. ```
-git clone https://github.com/ultralytics/yolov5  # clone
-%cd yolov5
-pip install -r requirements.txt
-
+3. pip install Flask
+________________________________________________________________________________________________________________________
