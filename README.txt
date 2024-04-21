@@ -21,7 +21,7 @@ Run client.py using terminal to pass the argument appropriately.
     Note: You can create JSON file for your Image folder using create_json.py
 ________________________________________________________________________________________________________________________
 ## Method 2:
-Navigate to Infilect/Webapp/
+Navigate to Webapp/
 
 Follow the steps mentioned in Webapp_Readme.txt
 ________________________________________________________________________________________________________________________
