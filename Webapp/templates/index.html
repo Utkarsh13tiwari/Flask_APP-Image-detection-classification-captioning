@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detection and Captioning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #555;
+            margin-bottom: 20px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .container {
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+        #output-container {
+            flex: 1; /* Fill remaining space */
+            flex-direction: column;
+            align-items: flex-end; /* Align items to the right */
+
+        }
+        #output {
+            margin-top: 30px;
+            padding: 20px;
+        }
+        #output img {
+            width: 100%;
+            height: 600px;
+            margin-top: 10px;
+            max-width: 700px;
+            float: right;
+        }
+        #fileInput {
+            display: none; /* Hide the default file input */
+        }
+        .custom-upload-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .custom-upload-button:hover {
+            background-color: #45a049;
+        }
+        #uploadButton {
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        #caption {
+            margin-top: 100px;
+            font-style: italic;
+            text-align: right;
+            padding-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Infilect</h1>
+    </div>
+    <div class="container">
+        <form id="uploadForm" enctype="multipart/form-data">
+            <label for="fileInput" id="fileLabel" class="custom-upload-button">Choose Image</label>
+            <input type="file" id="fileInput" name="image" accept=".jpg, .jpeg, .png" required>
+            <button type="submit" id="uploadButton" class="custom-upload-button">Upload</button>
+        </form>
+    </div>
+    <h3 style="float: left; padding-left: 30px; font-family: 'Arial Black', sans-serif; font-size: 24px; font-weight: bold; text-transform: uppercase;">Classification Results: </h3>
+    <h3 style="float: right; padding-right: 30px; font-family: 'Arial Black', sans-serif; font-size: 24px; font-weight: bold; text-transform: uppercase;">Recognition + Classification Results:</h3>
+    <div id="caption"></div>
+    <div id="output-container">
+    </div>
+    <div id="output">
+    </div>
+
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            uploadImage();
+        });
+
+        function uploadImage() {
+            var formData = new FormData();
+            formData.append('image', document.getElementById('fileInput').files[0]);
+
+            fetch('/process_image', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                displayOutput(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+
+        function displayOutput(data) {
+            var outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = '';
+
+            // Display full image
+            var img = new Image();
+            img.src = 'data:image/jpeg;base64,' + data.full_image;
+            outputDiv.appendChild(img);
+
+            // Display classification results
+            var classificationResults = data.classification_results;
+            classificationResults.forEach(function(result) {
+                var label = document.createElement('p');
+                label.textContent = 'Classification: ' + result[0] + ' (Score: ' + result[1] + ')';
+                outputDiv.appendChild(label);
+            });
+
+            // Display captioning results
+            var captionDiv = document.getElementById('caption');
+            captionDiv.innerHTML = '';
+
+            var captioningResults = data.captioning_results;
+            captioningResults.forEach(function(result) {
+                var label = document.createElement('p');
+                label.textContent = 'Caption: ' + result;
+                captionDiv.appendChild(label);
+            });
+        }
+    </script>
+</body>
+</html>
