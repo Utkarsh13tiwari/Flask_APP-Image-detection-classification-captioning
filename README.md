@@ -2,7 +2,7 @@
 ________________________________________________________________________________________________________________________
 ## Method 1:
 
-Client.py and server.py
+### Client.py and server.py
 
 Navigate to Client_Server/
 
@@ -28,6 +28,8 @@ Note: You can create JSON file for your Image folder using create_json.py
 ![Result using Client/Server](https://github.com/Utkarsh13tiwari/Flask_APP-Image-detection-classification-captioning/blob/main/Client_Server/result_image.jpg)
 ________________________________________________________________________________________________________________________
 ## Method 2:
+
+### Webapp
 Navigate to Webapp/
 
 Follow the steps mentioned in Webapp_Readme.txt
