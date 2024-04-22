@@ -15,12 +15,14 @@ ________________________________________________
 Run client.py using terminal to pass the argument appropriately.
 
 1. Example on Single Image:
+    ```bash
     python client.py --file C:\Users\utkar\PycharmProjects\Infilect\Images\image-24.jpg
 
 2. Example on JSON/Multiple Images:
+    ```bash
     python client.py --json-file C:\Users\utkar\PycharmProjects\Infilect\Images\images_data.json
 
-    Note: You can create JSON file for your Image folder using create_json.py
+Note: You can create JSON file for your Image folder using create_json.py
 ________________________________________________________________________________________________________________________
 ## Method 2:
 Navigate to Webapp/
