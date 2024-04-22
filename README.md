@@ -23,6 +23,8 @@ Run client.py using terminal to pass the argument appropriately.
     python client.py --json-file C:\Users\utkar\PycharmProjects\Infilect\Images\images_data.json
 
 Note: You can create JSON file for your Image folder using create_json.py
+
+![Result using Client/Server](https://github.com/Utkarsh13tiwari/Flask_APP-Image-detection-classification-captioning/blob/main/Client_Server/result_image.jpg)
 ________________________________________________________________________________________________________________________
 ## Method 2:
 Navigate to Webapp/
