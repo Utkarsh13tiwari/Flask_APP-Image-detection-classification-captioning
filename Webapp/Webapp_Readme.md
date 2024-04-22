@@ -23,7 +23,7 @@ ________________________________________________________________________________
 You can upload an image using the web interface by clicking the "Choose File" button and selecting an image file from your local system.
 
 1. "Choose File"
-2. Click on Upload
+2. Click on "Upload"
 
 Result will be displayed.
 ________________________________________________________________________________________________________________________
@@ -31,9 +31,9 @@ ________________________________________________________________________________
 
 Once an image is uploaded, the application performs the following tasks:
 
--> Object Detection: Detects objects in the image using the YOLOv5 model.
--> Image Classification: Classifies objects detected in the image using a pre-trained ResNet50 model.
--> Image Captioning: Generates a caption for the uploaded image using a Vision Encoder-Decoder model.
+- Object Detection: Detects objects in the image using the YOLOv5 model.
+- Image Classification: Classifies objects detected in the image using a pre-trained ResNet50 model.
+- Image Captioning: Generates a caption for the uploaded image using a Vision Encoder-Decoder model.
 ________________________________________________________________________________________________________________________
 ### Viewing Results
 
@@ -41,12 +41,12 @@ The processed image with bounding boxes and labels, along with classification re
 ________________________________________________________________________________________________________________________
 ## Technologies/Models Used
 
--> Flask: Web framework for building the application.
--> PyTorch: Deep learning library used for object detection, image classification, and image captioning tasks.
--> YOLOv5: Object detection model used for detecting objects in images.
--> ResNet50: Pre-trained model for image classification.
--> Vision Encoder-Decoder Model: Pre-trained model for image captioning.
+- Flask: Web framework for building the application.
+- PyTorch: Deep learning library used for object detection, image classification, and image captioning tasks.
+- YOLOv5: Object detection model used for detecting objects in images.
+- ResNet50: Pre-trained model for image classification.
+- Vision Encoder-Decoder Model: Pre-trained model for image captioning.
 ________________________________________________________________________________________________________________________
 # Results
 
--> See the Screenshots in the Webapp/Results/ Directory.
+![Result using Webapp](https://github.com/Utkarsh13tiwari/Flask_APP-Image-detection-classification-captioning/blob/main/Webapp/Results/Output.png)
