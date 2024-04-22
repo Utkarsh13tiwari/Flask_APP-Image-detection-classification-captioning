@@ -39,10 +39,9 @@ or
 Download:
 ```bash
 1. pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118 (Download Pytorch)
-
+```bash
 2. git clone https://github.com/ultralytics/yolov5  # clone
    %cd yolov5
    pip install -r requirements.txt
-
+```bash
 3. pip install Flask
-________________________________________________________________________________________________________________________
