@@ -38,11 +38,16 @@ run `requirements.txt`
 or
 Download:
 
-1. ```pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118```  # Download PyTorch
+1. Download PyTorch
+    ```bash 
+    pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+2. Clone YOLOv5 repository
+    ```bash
+    git clone https://github.com/ultralytics/yolov5  # clone
+    %cd yolov5
+    pip install -r requirements.txt
 
-2. ```git clone https://github.com/ultralytics/yolov5```  # clone
-   ```%cd yolov5```
-   ```pip install -r requirements.txt```
-
-3. ```pip install Flask # Install Flask```
+3. Install Flask
+   ```bash
+   pip install Flask
 
