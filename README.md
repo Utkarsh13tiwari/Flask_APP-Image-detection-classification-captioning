@@ -24,12 +24,16 @@ Run client.py using terminal to pass the argument appropriately.
 
 Note: You can create JSON file for your Image folder using create_json.py
 
+### Result:
 ![Result using Client/Server](https://github.com/Utkarsh13tiwari/Flask_APP-Image-detection-classification-captioning/blob/main/Client_Server/result_image.jpg)
 ________________________________________________________________________________________________________________________
 ## Method 2:
 Navigate to Webapp/
 
 Follow the steps mentioned in Webapp_Readme.txt
+
+### Result:
+![Result using Webapp](https://github.com/Utkarsh13tiwari/Flask_APP-Image-detection-classification-captioning/blob/main/Webapp/Results/Output.png)
 ________________________________________________________________________________________________________________________
 ## Requirement
 
