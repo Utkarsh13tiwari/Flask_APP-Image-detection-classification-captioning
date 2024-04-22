@@ -4,6 +4,8 @@ ________________________________________________________________________________
 
 Client.py and server.py
 
+Navigate to Client_Server/
+
 1. Run server.py
 2. Run client.py in separate terminal
 ________________________________________________
