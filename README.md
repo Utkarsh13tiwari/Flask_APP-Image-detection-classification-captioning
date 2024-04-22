@@ -3,8 +3,8 @@ ________________________________________________________________________________
 ## Method 1: Client.py and server.py
 Navigate to Client_Server/
 
-1. Run server.py
-2. Run client.py in separate terminal
+1. Run `server.py`
+2. Run `client.py` in separate terminal
 ________________________________________________
 Make sure to pass the necessary paths/arguments.
 You can either pass --json-file (Folder of images) or --file ( single image path )
@@ -27,17 +27,17 @@ ________________________________________________________________________________
 ## Method 2: Webapp
 Navigate to Webapp/
 
-Follow the steps mentioned in Webapp_Readme.txt
+Follow the steps mentioned in `Webapp_Readme.md`
 
 ### Result:
 ![Result using Webapp](https://github.com/Utkarsh13tiwari/Flask_APP-Image-detection-classification-captioning/blob/main/Webapp/Results/Output.png)
 ________________________________________________________________________________________________________________________
 ## Requirement
 
-run requirements.txt
+run `requirements.txt`
 or
 Download:
-
+```bash
 1. pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118 (Download Pytorch)
 
 2. git clone https://github.com/ultralytics/yolov5  # clone
